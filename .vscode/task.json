@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build OpenGL Project",
+            "type": "shell",
+            "command": "C:/mingw64/bin/g++.exe", 
+            "args": [
+                "-g",                      
+                "${workspaceFolder}/src/main.cpp", 
+                "-o", "${workspaceFolder}/build/main", 
+                "-I", "${workspaceFolder}/include",   
+                "-L", "${workspaceFolder}/lib",       
+                "-lglfw3",  
+                "-lGL",    
+                "-lGLU",    
+                "-lm",      
+                "-ldl"     
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Biên dịch dự án OpenGL với g++."
+        }
+    ]
+}
